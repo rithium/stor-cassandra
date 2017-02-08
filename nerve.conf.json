@@ -1,0 +1,20 @@
+{
+  "instance_id": "cassandra",
+  "services": {
+    "cassandra": {
+      "host": "$SERVICE_HOST",
+      "port": 9042,
+      "reporter_type": "zookeeper",
+      "zk_hosts": [
+        "$ZK_HOSTS"
+      ],
+      "zk_path": "/nerve/services/cassandra",
+      "check_interval": 1,
+      "checks": [
+        {
+          "type": "tcp"
+        }
+      ]
+    }
+  }
+}
